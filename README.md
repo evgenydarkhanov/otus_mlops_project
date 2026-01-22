@@ -6,7 +6,7 @@
 
 ## Описание проекта
 
-some text
+Проект реализует веб-сервис для распознавания речи с использованием моделей машинного обучения. Приложение записывает входящее аудио, сохраняет запись в формате WAV и транскрибирует в текст. Прототип демонстрационный и не является полноценным продуктом.
 
 ## Структура проекта
 
@@ -15,8 +15,8 @@ project-repo/
 ├── README.md
 ├── app.py              # основной код приложения
 ├── models/             # директория для ASR моделей
-├── pyproject.toml      # зависимости проекта
-├── requirements.txt    # конфигурация проекта
+├── pyproject.toml      # конфигурация проекта
+├── requirements.txt    # зависимости проекта
 ├── static/
 │   ├── index.html      # код приложения
 │   └── voice.js        # код приложения
@@ -29,7 +29,7 @@ project-repo/
 ## Требования
 
 - Python 3
-- пакетный менеджер [UV](https://docs.astral.sh/uv/)
+- пакетный менеджер [UV](https://docs.astral.sh/uv/) (опционально)
 
 ## Установка
 
@@ -55,14 +55,26 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+> установка `nemo_toolkit[asr]` может быть длительной.
+
 3. Загрузите ASR модель
 
-Модель должна поддерживаться фреймворком [NVIDIA NeMo](https://github.com/NVIDIA-NeMo/NeMo) и быть совместима с классом `nemo.collections.asr.models.EncDecCTCModelBPE`.
+В проекте используется [nvidia/stt_ru_conformer_ctc_large](https://huggingface.co/nvidia/stt_ru_conformer_ctc_large).
 
-В проекте используется [nvidia/stt_ru_conformer_ctc_large](https://huggingface.co/nvidia/stt_ru_conformer_ctc_large)
-
-Примеры подходящих [моделей](https://huggingface.co/nvidia/models?search=stt_conformer_ctc_large).
+Файл модели с расширением `.nemo` поместите в директорию `models/`.
 
 ## Использование
 
-1. 
+Запустите приложение
+
+```Bash
+uvicorn app:app --reload
+```
+
+или
+
+```Bash
+uv run uvicorn app:app --reload
+```
+
+Далее переходите в браузер по сгенерированной ссылке.

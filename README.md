@@ -57,9 +57,7 @@ pip install -r requirements.txt
 
 > установка `nemo_toolkit[asr]` может быть длительной.
 
-3. Загрузите ASR модель
-
-В проекте используется [nvidia/stt_ru_conformer_ctc_large](https://huggingface.co/nvidia/stt_ru_conformer_ctc_large).
+3. Загрузите ASR [модель](https://huggingface.co/nvidia/stt_ru_conformer_ctc_large).
 
 Файл модели с расширением `.nemo` поместите в директорию `models/`.
 

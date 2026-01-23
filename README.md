@@ -36,7 +36,7 @@ project-repo/
 1. Клонируйте репозиторий
 
 ```Bash
-git clone git@github.com:evgenydarkhanov/otus_mlops_project.git
+git clone https://github.com/evgenydarkhanov/otus_mlops_project.git
 cd otus_mlops_project
 git checkout proof-of-concept
 ```

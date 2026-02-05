@@ -1,0 +1,31 @@
+### PROVIDER VARIBLES AND SHARED VARIABLES ###
+yc_zone                  = ""
+yc_token                 = ""
+yc_cloud_id              = ""
+yc_folder_id             = ""
+yc_ssh_public_key_path   = ""
+yc_ssh_private_key_path  = ""
+
+### IAM VARIABLES ###
+yc_service_account_name  = "otus-mlops-project-sa"
+
+### NETWORK VARIABLES ###
+yc_network_name          = "otus-mlops-project-network"
+yc_subnet_name           = "otus-mlops-project-subnet"
+yc_subnet_range          = "10.0.0.0/24"
+
+### STORAGE VARIABLES ###
+yc_bucket_name           = "otus-mlops-project-bucket"
+yc_bucket_size           = 53687091200              # 50 GB
+yc_default_storage_class = "standard"
+
+### VIRTUAL MACHINE VARIABLES ###
+yc_disk_name             = "otus-mlops-project-disk"
+yc_disk_type             = "network-ssd"
+yc_image_id              = "fd808e721rc1vt7jkd0o"   # Ubuntu 20.04 LTS
+yc_vm_name               = "otus-mlops-project-vm"
+yc_platform_id           = "standard-v3"
+yc_vm_cores              = 16
+yc_vm_memory             = 16
+common_voice_dataset     = ""
+common_voice_api_key     = ""
